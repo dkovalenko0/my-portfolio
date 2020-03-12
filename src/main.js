@@ -3,6 +3,7 @@ import App from "./App.vue";
 
 import router from "./router";
 import store from "./store";
+import Loader from "./components/app/Loader";
 import "./registerServiceWorker";
 
 import firebase from "firebase/app";
@@ -11,6 +12,7 @@ import "firebase/database";
 import "firebase/storage";
 
 Vue.config.productionTip = false;
+Vue.component('Loader', Loader)
 
 firebase.initializeApp({
   apiKey: "AIzaSyDcg4GY2q0H-McAkFTSMyqNQk2XTQ_6Wr0",

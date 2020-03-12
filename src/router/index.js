@@ -8,7 +8,38 @@ const routes = [
   {
     path: "/",
     name: "Home",
-    component: Home
+    meta: { layout: "main" },
+    component: () => import("../views/Home")
+  },
+  {
+    path: "/work",
+    name: "Work",
+    meta: { layout: "main" },
+    component: () => import("../views/Work")
+  },
+  {
+    path: "/about",
+    name: "About",
+    meta: { layout: "main" },
+    component: () => import("../views/About")
+  },
+  {
+    path: "/",
+    name: "Blog",
+    meta: { layout: "main" },
+    component: () => import("../views/Blog")
+  },
+  {
+    path: "/services",
+    name: "Services",
+    meta: { layout: "main" },
+    component: () => import("../views/Services")
+  },
+  {
+    path: "/contact",
+    name: "Contact",
+    meta: { layout: "main" },
+    component: () => import("../views/Contact")
   }
 ];
 
