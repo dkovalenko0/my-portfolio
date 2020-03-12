@@ -1,5 +1,24 @@
 <template>
-  <div id="app"></div>
+  <div id="app">
+    <component :is="layout"/>
+  </div>
 </template>
+
+<script>
+  import MainLayout from "./layouts/MainLayout";
+
+  export default {
+    name: 'app',
+
+    computed: {
+      layout() {
+        return this.$route.meta.layout + '-layout'
+      }
+    },
+    components: {
+      MainLayout
+    }
+  }
+</script>
 
 <style lang="scss"></style>
