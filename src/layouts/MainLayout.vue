@@ -35,4 +35,14 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped lang="scss">
+.app-main-layout {
+  display: flex;
+}
+.main-layout-panel {
+  flex-basis: 300px;
+  height: 100vh;
+  background-color: #242b2e;
+  box-shadow: 10px 1px 14px 0px rgba(0, 0, 0, 0.6);
+}
+</style>

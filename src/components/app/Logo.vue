@@ -16,6 +16,7 @@ export default {
 .logo {
   font-family: "Alfa Slab One", cursive;
   color: #364048;
+  background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;

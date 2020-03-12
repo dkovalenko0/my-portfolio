@@ -24,7 +24,7 @@ const routes = [
     component: () => import("../views/About")
   },
   {
-    path: "/",
+    path: "/blog",
     name: "Blog",
     meta: { layout: "main" },
     component: () => import("../views/Blog")

@@ -53,4 +53,25 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped lang="scss">
+.socials {
+  padding: 28px 25px 0 0;
+
+  ul {
+    text-align: right;
+    li {
+      display: inline-block;
+
+      &:not(:last-child) {
+        margin-right: 9px;
+      }
+      a {
+        img {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+}
+</style>

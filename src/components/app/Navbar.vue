@@ -2,24 +2,17 @@
   <div>
     <nav class="navbar">
       <ul>
-        <li>
-          <router-link to="/">Home</router-link>
-        </li>
-        <li>
-          <router-link to="/work">Work</router-link>
-        </li>
-        <li>
-          <router-link to="/about">About</router-link>
-        </li>
-        <li>
-          <router-link to="/blog">Blog</router-link>
-        </li>
-        <li>
-          <router-link to="/services">Services</router-link>
-        </li>
-        <li>
-          <router-link to="/contact">Contact</router-link>
-        </li>
+        <router-link tag="li" to="/">Home</router-link>
+
+        <router-link tag="li" to="/work">Work</router-link>
+
+        <router-link tag="li" to="/about">About</router-link>
+
+        <router-link tag="li" to="/blog">Blog</router-link>
+
+        <router-link tag="li" to="/services">Services</router-link>
+
+        <router-link tag="li" to="/contact">Contact</router-link>
       </ul>
     </nav>
   </div>
@@ -31,4 +24,40 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped lang="scss">
+.navbar {
+  ul {
+    text-transform: uppercase;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 32px;
+    li {
+      text-align: right;
+      cursor: pointer;
+      background-color: #2f373b;
+      background-image: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.02) 0%,
+        rgba(255, 255, 255, 0.02) 100%
+      );
+      padding: 12px 25px 12px 0;
+      color: #ffffff;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+      &:hover {
+        background-color: #1ab5b3;
+        background-image: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.1) 0%,
+          rgba(255, 255, 255, 0.1) 100%
+        );
+      }
+
+      &:last-child {
+        border-bottom: 1px solid #202426;
+      }
+    }
+  }
+}
+</style>
