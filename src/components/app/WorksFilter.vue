@@ -7,19 +7,13 @@
           <a href="#">All Works</a>
         </li>
         <li>
-          <a href="#">web design</a>
+          <a href="#">HTML/CSS</a>
         </li>
         <li>
-          <a href="#">illustration</a>
+          <a href="#">JavaScript</a>
         </li>
         <li>
-          <a href="#">photography</a>
-        </li>
-        <li>
-          <a href="#">wallpapers</a>
-        </li>
-        <li>
-          <a href="#">brochures</a>
+          <a href="#">Vue</a>
         </li>
       </ul>
     </div>
@@ -64,6 +58,7 @@ export default {
         font-size: 13px;
         font-weight: 300;
         line-height: 24px;
+        transition: all 0.3s linear;
 
         &:hover {
           color: #fff;

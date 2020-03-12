@@ -62,4 +62,13 @@ figure {
 a {
   text-decoration: none;
 }
+
+.active {
+  background-color: #1ab5b3 !important;
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  ) !important;
+}
 </style>

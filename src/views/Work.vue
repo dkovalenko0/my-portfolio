@@ -1,8 +1,17 @@
-<template> </template>
+<template>
+  <div class="works">
+    <WorksList />
+  </div>
+</template>
 
 <script>
+import WorksList from "../components/WorksList";
 export default {
-  name: "Work"
+  name: "Work",
+
+  components: {
+    WorksList
+  }
 };
 </script>
 
