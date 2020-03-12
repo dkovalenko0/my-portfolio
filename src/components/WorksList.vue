@@ -42,6 +42,8 @@ export default {
 
 <style scoped lang="scss">
 .works__list {
+  display: flex;
+  flex-wrap: wrap;
   .works__item {
     figure {
       position: relative;

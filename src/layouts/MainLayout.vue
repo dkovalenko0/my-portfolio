@@ -39,8 +39,11 @@ export default {
 .app-main-layout {
   display: flex;
 }
+.app-content {
+  flex-basis: 84%;
+}
 .main-layout-panel {
-  flex-basis: 300px;
+  flex-basis: 16%;
   height: 100vh;
   background-color: #242b2e;
 }
