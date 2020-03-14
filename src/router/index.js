@@ -17,13 +17,7 @@ const routes = [
     meta: { layout: "main" },
     component: () => import("../views/Work")
   },
-  {
-    path: "/:name",
-    props: true,
-    name: "SingleWork",
-    meta: { layout: "main" },
-    component: () => import("../components/SingleWork")
-  },
+
   {
     path: "/about",
     name: "About",
@@ -47,6 +41,13 @@ const routes = [
     name: "Contact",
     meta: { layout: "main" },
     component: () => import("../views/Contact")
+  },
+  {
+    path: "/:name",
+    props: true,
+    name: "SingleWork",
+    meta: { layout: "main" },
+    component: () => import("../components/SingleWork")
   }
 ];
 

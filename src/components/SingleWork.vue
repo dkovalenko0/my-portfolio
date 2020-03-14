@@ -10,17 +10,17 @@
         <div class="swiper-pagination" slot="pagination"></div>
       </swiper>
       <div class="single-work__descr">
-        <div class="title">
+        <div class="page__title">
           {{ getWork.title }}
         </div>
-        <div class="text">
+        <div class="page__text">
           {{ getWork.description }}
         </div>
       </div>
     </div>
     <div class="single-work__rightside">
       <div class="single-work__info">
-        <div class="title">
+        <div class="page__title">
           Project Info
         </div>
         <ul>
@@ -46,7 +46,7 @@
         </ul>
       </div>
       <div class="single-work__tags">
-        <div class="title">
+        <div class="page__title">
           Tags
         </div>
         <ul>
@@ -59,7 +59,7 @@
         </ul>
       </div>
       <div class="single-work__features">
-        <div class="title">
+        <div class="page__title">
           Project Features
         </div>
         <ul>
@@ -67,6 +67,14 @@
           <li>Clean & Commented Code</li>
           <li>Highly Customizable</li>
         </ul>
+      </div>
+      <div class="single-work__demo">
+        <div class="page__title">
+          Demo
+        </div>
+        <a :href="getWork.url" target="_blank">
+          Click to see a demo of this work!
+        </a>
       </div>
     </div>
   </div>
@@ -166,7 +174,6 @@ export default {
 
         img {
           margin-right: 15px;
-          cursor: pointer;
           width: 20px;
           height: auto;
         }
@@ -210,21 +217,15 @@ export default {
       }
     }
   }
-}
 
-.title {
-  color: #000000;
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 26px;
-}
-
-.text {
-  margin-top: 10px;
-  max-width: 720px;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 30px;
+  &__demo {
+    margin-top: 30px;
+    a {
+      display: inline-block;
+      margin-top: 15px;
+      color: #1ab5b3;
+    }
+  }
 }
 
 /*.isLiked {

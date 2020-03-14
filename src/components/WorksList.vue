@@ -5,7 +5,7 @@
       <div class="works__item" v-for="work in getWorks" v-else>
         <figure>
           <router-link
-            :to="{ path: '/' + work.name, params: { name: work.name } }"
+            :to="{ path: '/' + work.name /*params: { name: work.name }*/ }"
             :style="{ backgroundImage: `url('${work.src}')` }"
           >
             <figcaption>
