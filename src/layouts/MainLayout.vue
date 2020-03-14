@@ -42,6 +42,9 @@ export default {
 .app-content {
   flex-basis: 84%;
 }
+.app-page {
+  height: 100%;
+}
 .main-layout-panel {
   flex-basis: 16%;
   height: 100vh;

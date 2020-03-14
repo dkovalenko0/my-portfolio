@@ -26,5 +26,16 @@ export default {
     getWorks(state) {
       return state.works;
     }
+
+    /*workByTitle(state) {
+      return workTitle => {
+        for (let i in state.works) {
+          if (i.title === workTitle) {
+            return state.works;
+          }
+        }
+        return state.works.find(work => work.title === workTitle);
+      };
+    }*/
   }
 };

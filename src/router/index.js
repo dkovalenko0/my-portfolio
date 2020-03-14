@@ -18,6 +18,13 @@ const routes = [
     component: () => import("../views/Work")
   },
   {
+    path: "/:name",
+    props: true,
+    name: "SingleWork",
+    meta: { layout: "main" },
+    component: () => import("../components/SingleWork")
+  },
+  {
     path: "/about",
     name: "About",
     meta: { layout: "main" },

@@ -4,18 +4,17 @@
       <Loader v-if="loading" />
       <div class="works__item" v-for="work in getWorks" v-else>
         <figure>
-          <a
-            :href="work.url"
-            target="_blank"
+          <router-link
+            :to="{ path: '/' + work.name, params: { name: work.name } }"
             :style="{ backgroundImage: `url('${work.src}')` }"
           >
             <figcaption>
               <h2>
-                {{ work.title }}
+                {{ work.name }}
               </h2>
               <h3>{{ work.postTitle }}</h3>
             </figcaption>
-          </a>
+          </router-link>
         </figure>
       </div>
     </div>
