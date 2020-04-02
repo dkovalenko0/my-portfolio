@@ -14,17 +14,17 @@
           >About</router-link
         >
 
-        <router-link tag="li" to="/blog" active-class="active"
+        <!--<router-link tag="li" to="/blog" active-class="active"
           >Blog</router-link
         >
 
         <router-link tag="li" to="/services" active-class="active"
           >Services</router-link
-        >
+        >-->
 
-        <router-link tag="li" to="/contact" active-class="active"
+        <!--<router-link tag="li" to="/contact" active-class="active"
           >Contact</router-link
-        >
+        >-->
       </ul>
     </nav>
   </div>

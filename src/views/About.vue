@@ -5,7 +5,7 @@
         <img src="@/assets/images/about/about.jpg" alt="about" />
       </div>
       <div class="about-me">
-        <div class="page__title">About Me</div>
+        <div class="page__title">About me</div>
         <p class="page__text">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus
           accusantium aperiam dolorem doloremque, esse in ipsum laborum officiis
@@ -15,6 +15,17 @@
       </div>
     </div>
     <div class="about__rightside">
+      <div class="personal-info">
+        <div class="page__title">
+          Personal information
+        </div>
+        <ul>
+          <li>Dmitro Kovalenko</li>
+          <li>+38 (073) 048-05-99</li>
+          <li>kovalenkodima715@gmail.com</li>
+          <li>08.11.1999</li>
+        </ul>
+      </div>
       <div class="education">
         <div class="page__title">
           Education
@@ -97,6 +108,10 @@ export default {
     }
 
     .languages {
+      margin-top: 30px;
+    }
+
+    .education {
       margin-top: 30px;
     }
   }

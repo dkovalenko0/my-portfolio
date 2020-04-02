@@ -1,30 +1,26 @@
 <template>
-  <div class="single-work">
-    <div class="single-work__leftside">
-      <swiper class="swiper" :options="swiperOption">
-        <swiper-slide
-          v-for="img in getWorkImages"
-          :key="img"
-          :style="{ backgroundImage: `url(${img})` }"
-        ></swiper-slide>
-        <div class="swiper-pagination" slot="pagination"></div>
-      </swiper>
-      <div class="single-work__descr">
-        <div class="page__title">
-          {{ getWork.title }}
-        </div>
-        <div class="page__text">
-          {{ getWork.description }}
+  <div>
+    <Loader v-if="loading" />
+    <div class="single-work" v-else>
+      <div class="single-work__leftside">
+        <swiper class="swiper" :options="swiperOption">
+          <swiper-slide
+            v-for="img in getWorkImages"
+            :key="img"
+            :style="{ backgroundImage: `url(${img})` }"
+          ></swiper-slide>
+          <div class="swiper-pagination" slot="pagination"></div>
+        </swiper>
+        <div class="single-work__descr">
+          <div class="page__title">{{ getWork.title }}</div>
+          <div class="page__text">{{ getWork.description }}</div>
         </div>
       </div>
-    </div>
-    <div class="single-work__rightside">
-      <div class="single-work__info">
-        <div class="page__title">
-          Project Info
-        </div>
-        <ul>
-          <!--<li>
+      <div class="single-work__rightside">
+        <div class="single-work__info">
+          <div class="page__title">Project Info</div>
+          <ul>
+            <!--<li>
             <img
               src="@/assets/icons/likes.svg"
               alt="likes"
@@ -38,43 +34,36 @@
               v-else
             />
             {{ getWork.likes }}
-          </li>-->
-          <li>
-            <img src="@/assets/icons/date.svg" alt="date" />
-            {{ getWork.date }}
-          </li>
-        </ul>
-      </div>
-      <div class="single-work__tags">
-        <div class="page__title">
-          Tags
+            </li>-->
+            <li>
+              <img src="@/assets/icons/date.svg" alt="date" />
+              {{ getWork.date }}
+            </li>
+          </ul>
         </div>
-        <ul>
-          <li>
-            <a href="#">HTML/CSS</a>
-          </li>
-          <li>
-            <a href="#">JavaScript</a>
-          </li>
-        </ul>
-      </div>
-      <div class="single-work__features">
-        <div class="page__title">
-          Project Features
+        <div class="single-work__tags">
+          <div class="page__title">Technologies</div>
+          <ul>
+            <li>
+              <a href="#">HTML/CSS</a>
+            </li>
+            <li>
+              <a href="#">JavaScript</a>
+            </li>
+          </ul>
         </div>
-        <ul>
-          <li>Responsive Layout</li>
-          <li>Clean & Commented Code</li>
-          <li>Highly Customizable</li>
-        </ul>
-      </div>
-      <div class="single-work__demo">
-        <div class="page__title">
-          Demo
+        <!-- <div class="single-work__features">
+          <div class="page__title">Project Features</div>
+          <ul>
+            <li>Responsive Layout</li>
+            <li>Clean & Commented Code</li>
+            <li>Highly Customizable</li>
+          </ul>
+        </div>-->
+        <div class="single-work__demo">
+          <div class="page__title">Demo</div>
+          <a :href="getWork.url" target="_blank">Click to see a demo of this work!</a>
         </div>
-        <a :href="getWork.url" target="_blank">
-          Click to see a demo of this work!
-        </a>
       </div>
     </div>
   </div>
@@ -89,6 +78,7 @@ export default {
   name: "SingleWork",
   data: () => ({
     works: [],
+    loading: true,
     isLiked: false,
     swiperOption: {
       spaceBetween: 30,
@@ -129,6 +119,7 @@ export default {
   async mounted() {
     await this.fetchWorks();
     await this.fetchWorkImages(`${this.name}`);
+    this.loading = false;
   },
   components: {
     swiper,

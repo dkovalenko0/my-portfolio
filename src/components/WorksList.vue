@@ -1,17 +1,15 @@
 <template>
   <div>
-    <div class="works__list">
-      <Loader v-if="loading" />
-      <div class="works__item" v-for="work in getWorks" v-else>
+    <Loader v-if="loading" />
+    <div class="works__list" v-else>
+      <div class="works__item" v-for="work in getWorks" :key="work.id">
         <figure>
           <router-link
             :to="{ path: '/' + work.name /*params: { name: work.name }*/ }"
             :style="{ backgroundImage: `url('${work.src}')` }"
           >
             <figcaption>
-              <h2>
-                {{ work.name }}
-              </h2>
+              <h2>{{ work.name }}</h2>
               <h3>{{ work.postTitle }}</h3>
             </figcaption>
           </router-link>

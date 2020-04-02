@@ -24,7 +24,7 @@ const routes = [
     meta: { layout: "main" },
     component: () => import("../views/About")
   },
-  {
+  /*{
     path: "/blog",
     name: "Blog",
     meta: { layout: "main" },
@@ -35,13 +35,13 @@ const routes = [
     name: "Services",
     meta: { layout: "main" },
     component: () => import("../views/Services")
-  },
-  {
+  },*/
+  /*{
     path: "/contact",
     name: "Contact",
     meta: { layout: "main" },
     component: () => import("../views/Contact")
-  },
+  },*/
   {
     path: "/:name",
     props: true,
