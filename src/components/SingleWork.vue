@@ -44,11 +44,8 @@
         <div class="single-work__tags">
           <div class="page__title">Technologies</div>
           <ul>
-            <li>
-              <a href="#">HTML/CSS</a>
-            </li>
-            <li>
-              <a href="#">JavaScript</a>
+            <li v-for="tech in getWork.technologies.split(' ')" :key="tech">
+              <a href="#">{{tech}}</a>
             </li>
           </ul>
         </div>
@@ -119,6 +116,7 @@ export default {
   async mounted() {
     await this.fetchWorks();
     await this.fetchWorkImages(`${this.name}`);
+
     this.loading = false;
   },
   components: {

@@ -53,6 +53,7 @@ export default {
 
 <style scoped lang="scss">
 .socials {
+  margin-top: 15px;
   padding: 28px 25px 0 0;
 
   ul {
@@ -61,7 +62,7 @@ export default {
       display: inline-block;
 
       &:not(:last-child) {
-        margin-right: 9px;
+        margin-right: 12px;
       }
       a {
         img {

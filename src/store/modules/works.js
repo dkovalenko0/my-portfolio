@@ -20,6 +20,24 @@ export default {
   mutations: {
     updateWorks(state, works) {
       state.works = works[0];
+    },
+
+    getHTMLCSS(state) {
+      return Object.values(state.works).filter(
+        r => r.technologies.indexOf("HTML/CSS") !== -1
+      );
+    },
+
+    getJavaScript(state) {
+      return Object.values(state.works).filter(
+        r => r.technologies.indexOf("JavaScript") !== -1
+      );
+    },
+
+    getVue(state) {
+      return Object.values(state.works).filter(
+        r => r.technologies.indexOf("Vue") !== -1
+      );
     }
   },
   getters: {

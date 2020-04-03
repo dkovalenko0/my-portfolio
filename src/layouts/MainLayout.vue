@@ -3,7 +3,6 @@
     <div class="main-layout-panel">
       <Logo />
       <Navbar />
-      <WorksFilter />
       <Socials />
     </div>
 
@@ -18,7 +17,6 @@
 <script>
 import Logo from "../components/app/Logo";
 import Navbar from "../components/app/Navbar";
-import WorksFilter from "../components/app/WorksFilter";
 import Socials from "../components/app/Socials";
 
 export default {
@@ -29,7 +27,6 @@ export default {
   components: {
     Logo,
     Navbar,
-    WorksFilter,
     Socials
   }
 };

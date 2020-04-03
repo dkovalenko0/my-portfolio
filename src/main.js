@@ -12,7 +12,8 @@ import "firebase/database";
 import "firebase/storage";
 
 Vue.config.productionTip = false;
-Vue.component('Loader', Loader)
+Vue.component("Loader", Loader);
+// Vue.forceUpdate();
 
 firebase.initializeApp({
   apiKey: "AIzaSyDcg4GY2q0H-McAkFTSMyqNQk2XTQ_6Wr0",
