@@ -121,18 +121,18 @@ export default {
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
       transition: all 0.3s ease-in-out;
 
-      &:hover figcaption {
-        background-color: rgba(#1ab5b3, 1);
-        background-image: linear-gradient(
-          to top,
-          rgba(0, 0, 0, 0.1) 0%,
-          rgba(255, 255, 255, 0.1) 100%
-        );
-      }
+      // &:hover figcaption {
+      //   background-color: rgba(#1ab5b3, 1);
+      //   background-image: linear-gradient(
+      //     to top,
+      //     rgba(0, 0, 0, 0.1) 0%,
+      //     rgba(255, 255, 255, 0.1) 100%
+      //   );
+      // }
 
-      &:hover a {
-        transform: scale(1.1);
-      }
+      // &:hover a {
+      //   transform: scale(1.1);
+      // }
 
       a {
         transition: all 0.3s ease-in-out;
